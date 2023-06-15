@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'is_complate' => 'boolean',
+    ];
+    
     protected $fillable = [
         'title',
         'user_id',
